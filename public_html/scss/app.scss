@@ -1,0 +1,328 @@
+@import "foundation/settings";
+@import "foundation";
+
+
+/******* CUSTOM CLASSES *******/
+.headroom-x-large {
+    margin-top: 20vw !important;
+}
+.headroom-large {
+    margin-top: 10vw !important;
+}
+.headroom-medium {
+    margin-top: 5vw !important;
+}
+.headroom-small {
+    margin-top: 3vw !important;
+}
+.headroom-tiny {
+    margin-top: 1vw !important;
+}
+
+.dyn-headroom-x-large {
+    margin-top: 20vh;
+}
+.dyn-headroom-large {
+    margin-top: 10vh;
+}
+.dyn-headroom-medium {
+    margin-top: 5vh;
+} 
+.dyn-headroom-small {
+    margin-top: 3vh;
+}
+.dyn-headroom-tiny {
+    margin-top: 1vh;
+}
+
+.footroom-xx-large {
+    margin-bottom: 60vw !important;
+}
+
+.footroom-x-large {
+    margin-bottom: 20vw !important;
+}
+.footroom-large {
+    margin-bottom: 10vw !important;
+}
+.footroom-medium {
+    margin-bottom: 5vw !important;
+}
+.footroom-small {
+    margin-bottom: 3vw !important;
+}
+.footroom-tiny {
+    margin-bottom: 1vw !important;
+}
+
+.dyn-footroom-xx-large {
+    margin-bottom: 60vh !important;
+}
+
+.dyn-footroom-x-large {
+    margin-bottom: 20vh !important;
+}
+.dyn-footroom-large {
+    margin-bottom: 10vh !important;
+}
+.dyn-footroom-medium {
+    margin-bottom: 5vh !important;
+}
+.dyn-footroom-small {
+    margin-bottom: 3vh !important;
+}
+.dyn-footroom-tiny {
+    margin-bottom: 1vh !important;
+}
+
+
+
+.rotate {
+    $tiltDegree: 90deg;
+    /* Safari */
+    -webkit-transform: rotate($tiltDegree);
+    /* Firefox */
+    -moz-transform: rotate($tiltDegree);
+    /* IE */
+    -ms-transform: rotate($tiltDegree);
+    /* Opera */ 
+    -o-transform: rotate($tiltDegree);
+}
+
+.padding{
+    padding: 1rem;
+}
+
+.no-padding {
+    padding: 0 0 0 0;
+}
+
+.no-margin {
+    margin: 0 0 0 0;
+    width: 100%;
+}
+
+.no-margin-bottom{
+    margin-bottom: 0;
+}
+
+.position-bottom {
+    bottom: 0px;
+    top: auto;
+}
+
+
+.small-margin {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+    margin-right: 0.5rem;
+}
+
+
+.darker {
+    background-color: rgba($panel-bg,0.5);
+}
+
+.no-decoration {
+    text-decoration: none !important;
+}
+.no-decoration a {
+    text-decoration: none !important;
+}
+
+.roomRight {
+    margin-right: 1rem;
+}
+
+
+/******* STYLE *******/
+$bg-gradient-color-1: #ffffff;
+$bg-gradient-color-2: #cdb573;
+.background {
+    background: #6cab26;
+    background: -webkit-gradient(linear, left top, left bottom, from($bg-gradient-color-1), to($bg-gradient-color-2)); /* Saf4+, Chrome */
+    background: -webkit-linear-gradient(top, $bg-gradient-color-1, $bg-gradient-color-2); /* Chrome 10+, Saf5.1+ */
+    background: -moz-linear-gradient(top, $bg-gradient-color-1, $bg-gradient-color-2); /* FF3.6+ */
+    background: -o-linear-gradient(top, $bg-gradient-color-1, $bg-gradient-color-2); /* Opera 11.10+ */
+    background: linear-gradient(to bottom, $bg-gradient-color-1, $bg-gradient-color-2); /* W3C */
+    background-attachment: fixed;
+
+}
+
+//div backgrounds for team
+@mixin bg-style($img) {
+    background-image: url($img);
+    background-size: cover;
+
+    background-repeat:no-repeat;
+    background-position: center center;
+}
+
+.timon-bg {
+    @include bg-style("../img/timon-bg.png");
+}
+
+.monika-bg{
+    @include bg-style('../img/monika-bg.png');
+}
+
+.valentin-bg{
+    @include bg-style('../img/valentin-bg.png');
+}
+
+.flo-bg{
+    @include bg-style('../img/flo-bg.png');
+}
+
+.solid-color {
+    background-color: #41a296;
+}
+
+
+/******* OVERWRITES *******/
+//fix missbehaving footer
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+// add mouseover animation to buttons
+$fadeTime: 0.2s;
+.side-nav a:not(.anchor) {
+    letter-spacing: 0.1rem;
+    border-radius: $global-radius;
+    -o-transition: all $fadeTime linear;
+    -moz-transition: all $fadeTime linear;
+    -khtml-transition: all $fadeTime linear;
+    -webkit-transition: all $fadeTime linear;
+    -ms-transition: all $fadeTime linear;
+    transition: all $fadeTime linear;
+}
+
+.animateTransistion {
+    -webkit-transition: all $fadeTime linear;
+    -moz-transition: all $fadeTime linear;
+    -o-transition: all $fadeTime linear;
+    transition: all $fadeTime linear;
+}
+
+// customize tabs
+.tabs .tab-title > a {
+    border-radius: $global-radius;
+
+    font-size: 1.2rem;
+
+    $customTabPadding: 0.5rem;
+
+    padding-top: $customTabPadding;
+    padding-right: $customTabPadding*2;
+    padding-bottom: $customTabPadding;
+    padding-left: $customTabPadding*2;
+
+    $customTabMargin: 0.1rem;
+
+    margin-top: $customTabMargin;
+    margin-right: $customTabMargin*2;
+    margin-bottom: $customTabMargin;
+    margin-left: $customTabMargin*2;
+
+    -o-transition: all $fadeTime linear;
+    -moz-transition: all $fadeTime linear;
+    -khtml-transition: all $fadeTime linear;
+    -webkit-transition: all $fadeTime linear;
+    -ms-transition: all $fadeTime linear;
+    transition: all $fadeTime linear;
+}
+
+.tabs-content {
+    -o-transition: all $fadeTime linear;
+    -moz-transition: all $fadeTime linear;
+    -khtml-transition: all $fadeTime linear;
+    -webkit-transition: all $fadeTime linear;
+    -ms-transition: all $fadeTime linear;
+    transition: all $fadeTime linear;
+}
+
+.panel{
+    border-radius: $global-radius;
+}
+
+th {
+    font-weight: normal;
+}
+
+.radius {
+    border-radius:$global-radius;
+}
+
+p, a, h1, h2, h3, h4, h5, h6, blockquote {
+    white-space: initial;
+    letter-spacing: 0.05rem;
+    /*    text-shadow:  0px 0px 0.7rem rgba(0, 0, 0, 0.25);*/
+}
+
+.fixed {
+    z-index: 999;
+}
+
+.button p{
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 0;
+
+}
+
+@mixin custom-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+.roundedBox {
+     @include custom-radius(25px); 
+}
+
+// custom big button with effect, extends foundation default classes
+.highlightButton{
+    @extend .button;
+    @extend .large;
+    box-shadow: 0px 0px 5px rgba(255,255,255,0.5);
+}
+
+// Or selectively include components
+// @import
+//   "foundation/components/accordion",
+//   "foundation/components/alert-boxes",
+//   "foundation/components/block-grid",
+//   "foundation/components/breadcrumbs",
+//   "foundation/components/button-groups",
+//   "foundation/components/buttons",
+//   "foundation/components/clearing",
+//   "foundation/components/dropdown",
+//   "foundation/components/dropdown-buttons",
+//   "foundation/components/flex-video",
+//   "foundation/components/forms",
+//   "foundation/components/grid",
+//   "foundation/components/inline-lists",
+//   "foundation/components/joyride",
+//   "foundation/components/keystrokes",
+//   "foundation/components/labels",
+//   "foundation/components/magellan",
+//   "foundation/components/orbit",
+//   "foundation/components/pagination",
+//   "foundation/components/panels",
+//   "foundation/components/pricing-tables",
+//   "foundation/components/progress-bars",
+//   "foundation/components/reveal",
+//   "foundation/components/side-nav",
+//   "foundation/components/split-buttons",
+//   "foundation/components/sub-nav",
+//   "foundation/components/switches",
+//   "foundation/components/tables",
+//   "foundation/components/tabs",
+//   "foundation/components/thumbs",
+//   "foundation/components/tooltips",
+//   "foundation/components/top-bar",
+//   "foundation/components/type",
+//   "foundation/components/offcanvas",
+//   "foundation/components/visibility";

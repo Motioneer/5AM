@@ -1,0 +1,97 @@
+<!doctype html>
+<html class="no-js" lang="de">
+
+    <head>
+        <title>5AM Webdesign</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/normalize.css"/>
+        <link rel="stylesheet" href="css/app.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.0/css/swiper.min.css" />
+
+    </head>
+
+    <body class="solid-color">
+
+        <div class="off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+                <div class="off-canvas position-left" id="offCanvas" data-off-canvas>Oi im not hear</div>
+                <div class="off-canvas-content" data-off-canvas-content>
+
+
+                    <div class="row panel darker">
+                        <div class="small-3 column">
+                            <h1><a href="index.html" class="no-decoration">5AM</a></h1>
+                        </div>
+                        <div class="small-9 column no-decoration">
+                            <button type="button" class="button show-for-small-only right rotate" data-toggle="offCanvas">|||</button>
+                            <ul class="no-bullet inline-list right show-for-medium-up">
+                                <li><a class="button" href="menu.html">menu</a></li>
+                                <li><a class="button" href="team.html">team</a></li>
+                                <li><a class="button" href="kontakt.html">kontakt</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <main>
+                        <div class="row panel headroom-tiny roundedBox background">
+                            <!-- Slider main container -->
+                            <div class="swiper-container">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide"><img src="img/samples/1.jpg" alt="Sample Website 1" class="small-12 column"></div>
+                                    <div class="swiper-slide"><img src="img/samples/2.jpg" alt="Sample Website 2" class="small-12 column"></div>
+                                    <div class="swiper-slide"><img src="img/samples/3.jpg" alt="Sample Website 3" class="small-12 column"></div>
+                                    <div class="swiper-slide"><img src="img/samples/4.jpg" alt="Sample Website 4" class="small-12 column"></div>
+                                    <div class="swiper-slide"><img src="img/samples/5.jpg" alt="Sample Website 5" class="small-12 column"></div>
+                                    <div class="swiper-slide"><img src="img/samples/6.jpg" alt="Sample Website 6" class="small-12 column"></div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+
+                    <footer class="position-bottom headroom-large">
+                        <ul class="inline-list no-decoration panel darker ">
+                            <li><a class="button" href="mailto:go@5am.at">go@5AM.at</a></li>
+                            <li><p>copyright: 5AM Media GmbH</p></li>
+                        </ul>
+                    </footer>
+
+                </div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.0-beta.1/jquery-ui.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.0/js/swiper.jquery.min.js"></script>
+
+
+        <script src="js/app.js"></script>
+
+        <script src="js/foundation.min.js"></script>
+        <script src="js/foundation/foundation.equalizer.js"></script>
+        <!--  <script src="js/vendor/demo.js"></script> -->
+
+        <script>
+            $(function () {
+                $(document).foundation();
+            });
+        </script>
+
+        <script>
+            var mySwiper = new Swiper('.swiper-container', {
+                // Optional parameters
+                loop: true,
+autoplay: 2500,
+autoHeight: true,
+speed:1200
+            })
+        </script>
+    </body>
+</body>
+</html>
